@@ -14,7 +14,7 @@ Floor {
 Solid {
   translation 0 0.14999999999999997 0
   children [
-    Group {
+    DEF GR_FRAME Group {
       children [
         Shape {
           appearance PBRAppearance {
@@ -41,4 +41,7 @@ Solid {
       ]
     }
   ]
+  boundingObject USE GR_FRAME
+  physics Physics {
+  }
 }
