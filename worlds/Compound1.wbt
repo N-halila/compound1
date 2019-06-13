@@ -28,7 +28,7 @@ Solid {
         Transform {
           translation 0 0.15 0
           children [
-            Shape {
+            DEF SH_SPHERE Shape {
               appearance PBRAppearance {
                 baseColor 1 0 0
               }
@@ -36,6 +36,12 @@ Solid {
                 radius 0.05
               }
             }
+          ]
+        }
+        Transform {
+          translation 0 -0.11999999999999998 0
+          children [
+            USE SH_SPHERE
           ]
         }
       ]
