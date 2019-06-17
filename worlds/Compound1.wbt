@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation 0.20013424145750805 0.9785132340013936 0.0495795954033683 5.787262501660676
-  position -0.33685605589465595 0.289917527108253 1.31731149796295
+  orientation -0.07043430590585655 0.9953692185898974 -0.06541503829623004 4.781620342097813
+  position -1.9849475448183678 0.19442404060618443 0.43323306726353844
 }
 TexturedBackground {
 }
@@ -17,20 +17,20 @@ Solid {
     DEF GR_FRAME Group {
       children [
         Shape {
-          appearance DEF CYLINDER PBRAppearance {
-            baseColor 0 0 1
+          appearance DEF CY_COLOR PBRAppearance {
+            baseColor 0.6784313725490196 0.4980392156862745 0.6588235294117647
           }
           geometry DEF CYLINDER Cylinder {
             height 0.3
             radius 0.02
           }
         }
-        Transform {
+        DEF E1 Transform {
           translation 0 0.15 0
           children [
             DEF SH_SPHERE Shape {
               appearance PBRAppearance {
-                baseColor 1 0 0
+                baseColor 0.9882352941176471 0.9137254901960784 0.30980392156862746
               }
               geometry Sphere {
                 radius 0.05
@@ -38,52 +38,90 @@ Solid {
             }
           ]
         }
-        Transform {
+        DEF ED2 Transform {
           translation 0 -0.15000000000000002 0
           children [
             USE SH_SPHERE
           ]
         }
-        Transform {
+        DEF C1 Transform {
           translation 0.15 0.15000000000000002 0
           rotation 0 0 1 1.5707963220000003
           children [
             Shape {
-              appearance PBRAppearance {
-              }
+              appearance USE CY_COLOR
               geometry USE CYLINDER
             }
           ]
         }
-        Transform {
+        DEF CD2 Transform {
           translation 0.1499999993287147 -0.15000000000000002 0
           rotation 0 0 1 1.5707963220000003
           children [
             Shape {
-              appearance PBRAppearance {
-              }
+              appearance USE CY_COLOR
               geometry USE CYLINDER
             }
           ]
         }
-        Transform {
+        DEF E3 Transform {
           translation 0.3 0.15 0
           children [
             USE SH_SPHERE
           ]
         }
-        Transform {
+        DEF ED4 Transform {
           translation 0.3 -0.15 0
           children [
             USE SH_SPHERE
           ]
         }
-        Transform {
+        DEF CL3 Transform {
           translation 0.3 0 0
           children [
             Shape {
-              appearance PBRAppearance {
-              }
+              appearance USE CY_COLOR
+              geometry USE CYLINDER
+            }
+          ]
+        }
+        DEF CU4 Transform {
+          translation 0 0.15000000359617252 0.14999999999999997
+          rotation -1 0 0 4.712389004359173
+          children [
+            Shape {
+              appearance USE CY_COLOR
+              geometry USE CYLINDER
+            }
+          ]
+        }
+        DEF CD5 Transform {
+          translation 0 -0.1499999964038274 0.15000000719234502
+          rotation -1 0 0 4.712389004359173
+          children [
+            Shape {
+              appearance USE CY_COLOR
+              geometry USE CYLINDER
+            }
+          ]
+        }
+        DEF E5 Transform {
+          translation 0 0.15 0.3
+          children [
+            USE SH_SPHERE
+          ]
+        }
+        DEF ED6 Transform {
+          translation 0 -0.15 0.3
+          children [
+            USE SH_SPHERE
+          ]
+        }
+        Transform {
+          translation 0 0 0.3
+          children [
+            Shape {
+              appearance USE CY_COLOR
               geometry USE CYLINDER
             }
           ]
