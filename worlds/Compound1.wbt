@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.6931032800836722 0.6931032800836722 0.1980295085953349 0.75
-  position 1.2535414789535881 1.6625942191559198 2.3912243589506783
+  orientation 0.20013424145750805 0.9785132340013936 0.0495795954033683 5.787262501660676
+  position -0.33685605589465595 0.289917527108253 1.31731149796295
 }
 TexturedBackground {
 }
@@ -12,15 +12,15 @@ TexturedBackgroundLight {
 Floor {
 }
 Solid {
-  translation 0 0.14999999999999997 0
+  translation -0.020000000000000018 0.19999999999999998 0
   children [
     DEF GR_FRAME Group {
       children [
         Shape {
-          appearance PBRAppearance {
+          appearance DEF CYLINDER PBRAppearance {
             baseColor 0 0 1
           }
-          geometry Cylinder {
+          geometry DEF CYLINDER Cylinder {
             height 0.3
             radius 0.02
           }
@@ -39,9 +39,53 @@ Solid {
           ]
         }
         Transform {
-          translation 0 -0.11999999999999998 0
+          translation 0 -0.15000000000000002 0
           children [
             USE SH_SPHERE
+          ]
+        }
+        Transform {
+          translation 0.15 0.15000000000000002 0
+          rotation 0 0 1 1.5707963220000003
+          children [
+            Shape {
+              appearance PBRAppearance {
+              }
+              geometry USE CYLINDER
+            }
+          ]
+        }
+        Transform {
+          translation 0.1499999993287147 -0.15000000000000002 0
+          rotation 0 0 1 1.5707963220000003
+          children [
+            Shape {
+              appearance PBRAppearance {
+              }
+              geometry USE CYLINDER
+            }
+          ]
+        }
+        Transform {
+          translation 0.3 0.15 0
+          children [
+            USE SH_SPHERE
+          ]
+        }
+        Transform {
+          translation 0.3 -0.15 0
+          children [
+            USE SH_SPHERE
+          ]
+        }
+        Transform {
+          translation 0.3 0 0
+          children [
+            Shape {
+              appearance PBRAppearance {
+              }
+              geometry USE CYLINDER
+            }
           ]
         }
       ]
