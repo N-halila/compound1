@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.07043430590585655 0.9953692185898974 -0.06541503829623004 4.781620342097813
-  position -1.9849475448183678 0.19442404060618443 0.43323306726353844
+  orientation 0.09295052923194098 -0.9901455059974203 -0.10474767810607724 4.583358160343764
+  position 2.161218249556757 0.3838494624371977 0.32220838947201824
 }
 TexturedBackground {
 }
@@ -18,7 +18,7 @@ Solid {
       children [
         Shape {
           appearance DEF CY_COLOR PBRAppearance {
-            baseColor 0.6784313725490196 0.4980392156862745 0.6588235294117647
+            baseColor 0.3607843137254902 0.20784313725490197 0.4
           }
           geometry DEF CYLINDER Cylinder {
             height 0.3
@@ -117,8 +117,69 @@ Solid {
             USE SH_SPHERE
           ]
         }
-        Transform {
+        DEF CL6 Transform {
           translation 0 0 0.3
+          children [
+            Shape {
+              appearance USE CY_COLOR
+              geometry USE CYLINDER
+            }
+          ]
+        }
+        DEF CD7 Transform {
+          translation 0.15000000000000002 -0.15000000071923428 0.3
+          rotation 0 0 1 1.5707963220000003
+          children [
+            Shape {
+              appearance USE CY_COLOR
+              geometry USE CYLINDER
+            }
+          ]
+        }
+        DEF CU8 Transform {
+          translation 0.15 0.15 0.3
+          rotation 0 0 1 1.5707963220000003
+          children [
+            Shape {
+              appearance USE CY_COLOR
+              geometry USE CYLINDER
+            }
+          ]
+        }
+        DEF E7 Transform {
+          translation 0.3 0.15 0.3
+          children [
+            USE SH_SPHERE
+          ]
+        }
+        DEF ED8 Transform {
+          translation 0.3 -0.15 0.3
+          children [
+            USE SH_SPHERE
+          ]
+        }
+        DEF CL9 Transform {
+          translation 0.3 0 0.3
+          children [
+            Shape {
+              appearance USE CY_COLOR
+              geometry USE CYLINDER
+            }
+          ]
+        }
+        DEF CU10 Transform {
+          translation 0.3 0.1499999978422964 0.14999999999999988
+          rotation 0.9999999999999999 0 0 4.712388966
+          children [
+            Shape {
+              appearance USE CY_COLOR
+              geometry USE CYLINDER
+            }
+          ]
+        }
+        DEF CD11 Transform {
+          translation 0.3 -0.15000000215770357 0.1500000043154072
+          rotation 0.9999999999999999 0 0 4.712388966
           children [
             Shape {
               appearance USE CY_COLOR
